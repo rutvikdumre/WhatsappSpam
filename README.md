@@ -1,4 +1,6 @@
 #WhatsApp Spam
+
+
 Python script to spam your friends on WhatsApp
 Install the following
 Linux Users:
