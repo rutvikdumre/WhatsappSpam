@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 import time 
   
 
-driver = webdriver.Chrome('E:\Downloads\chromedriver_win32/chromedriver') 
+driver = webdriver.Chrome('/chromedriver') 
   
 driver.get("https://web.whatsapp.com/") 
 wait = WebDriverWait(driver, 600) 
