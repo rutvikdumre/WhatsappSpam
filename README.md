@@ -1,4 +1,4 @@
-#WhatsApp Spam
+WhatsApp Spam
 
 
 Python script to spam your friends on WhatsApp
