@@ -5,17 +5,24 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By 
 import time 
   
-
+target = []
+n=int(input("Enter no of contacts:"))
+for i in range(n):
+    x=input("Enter WhatsApp contact name:")
+    x='"'+x+'"'
+    target+=[x]
+string = input('Enter message:')
+t=int(input('Enter no of times you want to spam this message:'))
 driver = webdriver.Chrome('/chromedriver') 
   
 driver.get("https://web.whatsapp.com/") 
 wait = WebDriverWait(driver, 600) 
   
 
-target = ['"Name of your friend"']
-  
+print(target)
+    
 
-string = "Your Message"
+
 for j in target:  
     x_arg = '//span[contains(@title,'+ j +')]'
     group_title = wait.until(EC.presence_of_element_located(( 
@@ -24,6 +31,6 @@ for j in target:
     inp_xpath = '//div[@dir="ltr"][@data-tab="1"][@spellcheck="true"]'
     input_box = wait.until(EC.presence_of_element_located(( 
         By.XPATH, inp_xpath))) 
-    for i in range(100): 
+    for i in range(t): 
         input_box.send_keys(string + Keys.ENTER) 
         time.sleep(1) 
