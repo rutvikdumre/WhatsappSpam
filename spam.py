@@ -13,7 +13,7 @@ for i in range(n):
     target+=[x]
 string = input('Enter message:')
 t=int(input('Enter no of times you want to spam this message:'))
-driver = webdriver.Chrome('/chromedriver') 
+driver = webdriver.Chrome('chromedriver') 
   
 driver.get("https://web.whatsapp.com/") 
 wait = WebDriverWait(driver, 600) 
