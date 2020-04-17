@@ -4,13 +4,20 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys 
 from selenium.webdriver.common.by import By 
 import time 
-  
+
 target = []
-n=int(input("Enter no of contacts:"))
+file=open('contacts.csv','r')
+for i in file:
+    x=i[:-1]
+    x='"'+x+'"'
+    target+=[x]
+    
+print(target)
+'''n=int(input("Enter no of contacts:"))
 for i in range(n):
     x=input("Enter WhatsApp contact name:")
     x='"'+x+'"'
-    target+=[x]
+    target+=[x]'''
 string = input('Enter message:')
 t=int(input('Enter no of times you want to spam this message:'))
 driver = webdriver.Chrome('chromedriver') 
